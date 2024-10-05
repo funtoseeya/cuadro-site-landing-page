@@ -802,7 +802,6 @@ input[type='checkbox'] {
 /*     06. Services     */
 /************************/
 .cards-1 {
-	padding-top: 4rem;
 	padding-bottom: 1.625rem;
 	text-align: center;
 }
@@ -1871,12 +1870,23 @@ a:hover.back-to-top {
 	/* end of header */
 
 
-	/* Services */
+	/* Product */
 	.cards-1 .card {
 		display: inline-block;
 		max-width: 17.125rem;
 		vertical-align: top;
 	}
+	.pill-button {
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 1.2rem;
+		color: #b42318;
+		background-color: #fecdca;
+		border-radius: 50px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
 
 	.cards-1 .col-lg-12 div.card:nth-child(3n+2) {
 		margin-right: 2rem;
