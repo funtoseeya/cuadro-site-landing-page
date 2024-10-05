@@ -818,14 +818,13 @@ input[type='checkbox'] {
 	padding: 3.25rem 2rem 2rem 2rem;
 	border: 1px solid #c4d8dc;
 	border-radius: 0.5rem;
-	background: transparent;
+	background: white;
 }
 
 .cards-1 .card-image {
-	width: 6rem;
-	height: 6rem;
+	width: 12rem;
+	height: 12rem;
 	margin-right: auto;
-	margin-bottom: 2rem;
 	margin-left: auto;
 }
 
