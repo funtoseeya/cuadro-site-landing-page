@@ -25,8 +25,8 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "yourname@domain.com";
-$Subject = "New privacy request from Evolo landing page";
+$EmailTo = "matiasfuntoseeya@gmail.com";
+$Subject = "Cuadro Privacy Request";
 
 // prepare email body text
 $Body = "";
