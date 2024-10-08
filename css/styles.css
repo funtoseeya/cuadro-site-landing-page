@@ -1330,8 +1330,8 @@ input[type='checkbox'] {
 /*     13. About     */
 /*********************/
 .basic-4 {
-	padding-top: 7rem;
-	padding-bottom: 4rem;
+	padding-top: 3.5rem;
+	padding-bottom: 2.5rem;
 	text-align: center;
 }
 
@@ -1405,8 +1405,8 @@ input[type='checkbox'] {
 /*     14. Contact     */
 /***********************/
 .form-2 {
-	padding-top: 7rem;
-	padding-bottom: 6.25rem;
+	padding-top: 3rem;
+	padding-bottom: 2.5rem;
 	background: url('../images/contact-background.jpg') center center no-repeat;
 	background-size: cover; 
 }
