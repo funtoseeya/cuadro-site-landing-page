@@ -47,15 +47,11 @@
     <!-- end of preloader -->
 
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <a class="navbar-brand logo-text page-scroll turquoise" href="index.html">
-
             <h1 style="margin-bottom: 0px"><i class="fa-solid fa-signal" style="padding-right: 0.2rem;"></i>Cuadro</h1>
         </a>
-        <!-- Image Logo -->
-
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,41 +59,54 @@
             <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
         <!-- end of mobile menu toggle button -->
-
+    
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#index.html/header">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="index.html#header">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="index.html#product">Product</a>
                 </li>
-             
-
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="index.html#pricing">Pricing</a>
+                </li>
+    
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button"
                         aria-haspopup="true" aria-expanded="false">About</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Terms &
-                                Conditions</span></a>
+                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Terms & Conditions</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Privacy
-                                Policy</span></a>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Privacy Policy</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
-
+    
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="index.html#contact">Contact</a>
                 </li>
             </ul>
-            <a class="btn-outline-reg" href="https://funtoseeya.github.io/cuadro"
-                style="padding: 1.1875rem 1.125rem 1.1875rem 1.125rem">Cuadro app</a>
-
+    
+            <!-- Early Access Button and Form -->
+            <div id="earlyAccessNav" class="d-flex align-items-center">
+                <button class="btn-solid-reg" id="earlyAccessButton" style="padding: 1.1875rem 1.125rem;">Start building</button>
+                <form id="earlyAccessFormNav" method="POST" action="sendEmail.php" style="display: none; margin-left: 1rem;">
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-solid-reg">Submit</button>
+                </form>
+                <!-- Thank You Message (hidden initially) -->
+                <div id="thankYouMessageNav" style="display: none; margin-left: 1rem;">
+                    <p>Thank you! You've been added to the early access list.</p>
+                    <a class="btn btn-solid-reg" href="https://funtoseeya.github.io/cuadro">Go to Site</a>
+                </div>
+            </div>
         </div>
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
+    
+
 
 
     <!-- Header -->

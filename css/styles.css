@@ -147,7 +147,7 @@ a.white {
 }
 
 .btn-solid-reg:hover {
-	background-color: transparent;
+	background-color: #fff;
 	color: #00bfd8;
 	text-decoration: none;
 }

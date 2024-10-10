@@ -22,13 +22,16 @@ function handleNavEarlyAccessRequest() {
 }
 
 function handlePricingEarlyAccessRequest() {
-    document.getElementById("earlyAccessForm").addEventListener("submit", function(event) {
+    const pricing = document.getElementById("earlyAccessForm");
+    if (pricing) { 
+pricing.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
 
         // Display thank-you message and redirect button
         document.getElementById("earlyAccessForm").style.display = "none";
         document.getElementById("thankYouMessage").style.display = "block";
     });
+}
 }
 
 handleNavEarlyAccessRequest();
