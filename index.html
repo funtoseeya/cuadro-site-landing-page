@@ -49,58 +49,65 @@
     </div>
     <!-- end of preloader -->
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <!-- Text Logo - Use this if you don't have a graphic logo -->
+    <a class="navbar-brand logo-text page-scroll turquoise" href="index.html">
+        <h1 style="margin-bottom: 0px"><i class="fa-solid fa-signal" style="padding-right: 0.2rem;"></i>Cuadro</h1>
+    </a>
+    <!-- Mobile Menu Toggle Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-awesome fas fa-bars"></span>
+        <span class="navbar-toggler-awesome fas fa-times"></span>
+    </button>
+    <!-- end of mobile menu toggle button -->
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <a class="navbar-brand logo-text page-scroll turquoise" href="index.html">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#product">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+            </li>
 
-            <h1 style="margin-bottom: 0px"><i class="fa-solid fa-signal" style="padding-right: 0.2rem;"></i>Cuadro</h1>
-        </a>
-        <!-- Image Logo -->
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">About</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Terms & Conditions</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Privacy Policy</span></a>
+                </div>
+            </li>
+            <!-- end of dropdown menu -->
 
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#contact">Contact</a>
+            </li>
+        </ul>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#product">Product</a>
-                </li>
-
-
-                <!-- Dropdown Menu -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false">About</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Terms &
-                                Conditions</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Privacy
-                                Policy</span></a>
-                    </div>
-                </li>
-                <!-- end of dropdown menu -->
-
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">Contact</a>
-                </li>
-            </ul>
-            <a class="btn-outline-reg" href="https://funtoseeya.github.io/cuadro"
-                style="padding: 1.1875rem 1.125rem 1.1875rem 1.125rem">Cuadro app</a>
-
+        <!-- Early Access Button and Form -->
+        <div id="earlyAccessNav" class="d-flex align-items-center">
+            <button class="btn-outline-reg" id="earlyAccessButton" style="padding: 1.1875rem 1.125rem;">Start building</button>
+            <form id="earlyAccessFormNav" method="POST" action="sendEmail.php" style="display: none; margin-left: 1rem;">
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-solid-reg">Submit</button>
+            </form>
+            <!-- Thank You Message (hidden initially) -->
+            <div id="thankYouMessageNav" style="display: none; margin-left: 1rem;">
+                <p>Thank you! You've been added to the early access list.</p>
+                <a class="btn btn-solid-reg" href="https://funtoseeya.github.io/cuadro">Go to Site</a>
+            </div>
         </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+    </div>
+</nav> <!-- end of navbar -->
+<!-- end of navigation -->
 
 
     <!-- Header -->
@@ -114,7 +121,7 @@
                                 mastering Excel or complex BI tools.</h1>
                             <p class="p-large">Effortlessly analyze, filter, compare, and share insights — all with just
                                 a few clicks. </p>
-                            <a class="btn-solid-lg" href="https://funtoseeya.github.io/cuadro">Get started (it's free)
+                            <a class="btn-solid-lg page-scroll" href="#pricing">Get started (it's free)
                                 →</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
@@ -268,146 +275,83 @@
     </div> <!-- end of basic-3 -->
     <!-- end of video -->
 
-    <!-- Roadmap -->
-    <div id="roadmap" class="cards-2 ">
+    <!-- pricing -->
+    <div id="pricing" class="cards-2 ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Product Roadmap</h2>
+                    <h2>Pricing</h2>
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
 
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="label">
-                            <p class="tag">Now available</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-title">Now</div>
-                            <div class="card-subtitle">Q3 2024</div>
-                            <hr class="cell-divide-hr">
-                            <hr class="cell-divide-hr">
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">CSV Upload</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Data mapping</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Various analysis types</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Automated data formatting</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Generate charts in bulk</div>
-                                </li>
+ <!-- Card -->
+ <div class="card">
+    <div class="label">
+        <p class="tag">Limited time</p>
+    </div>
+    <div class="card-body">
+        <div class="card-title">$0</div>
+        <p>We're offering early access before our official launch.
+            Just enter your email below to get started.</p>
+             <!-- Early Access Form -->
 
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Advanced visualization tools</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Save to bookmarks dashboard</div>
-                                </li>
+        <form id="earlyAccessForm" method="POST" action="./php/sendEmail.php">
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="btn btn-solid-reg">Start building</button>
+        </form>
 
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Export to PDF and PPT</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="https://funtoseeya.github.io/cuadro/">Get
-                                    started</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+        <!-- Thank You Message & Redirect Button (hidden initially) -->
+        <div id="thankYouMessage" style="display: none;">
+            <p>Thank you! You've been added to the early access list.</p>
+            <a class="btn btn-solid-reg" href="https://funtoseeya.github.io/cuadro">Go to Site</a>
+        </div>
 
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">Next</div>
-                            <div class="card-subtitle">Q4 2024</div>
-                            <hr class="cell-divide-hr">
-                            <hr class="cell-divide-hr">
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Summary & Breakdown tabs</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Expand supported data types</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Trend & Density analysis</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Expand visualization catalog</div>
-                                </li>
+        <ul class="list-unstyled li-space-lg">
+            <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body">Easy CSV Upload</div>
+            </li>
+            
+            <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body">Various analysis types</div>
+            </li>
+            <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body">Generate charts in bulk</div>
+            </li>
+            <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body">Advanced visualization tools</div>
+            </li>
+            <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body">Save to bookmarks dashboard</div>
+            </li>
+            <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body">Export to PDF and PPT</div>
+            </li>
+        </ul>
 
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-outline-reg page-scroll" href="#">Subscribe for product updates</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+       
 
-                    <!-- Card-->
-                    <div class="card">
-
-                        <div class="card-body">
-                            <div class="card-title">Later</div>
-                            <div class="card-subtitle">H1 2025</div>
-
-                            <hr class="cell-divide-hr">
-                            <hr class="cell-divide-hr">
-
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">AI-Assisted Summaries</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Automated data mapping</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">User management</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Share and save across sessions</div>
-                                </li>
-
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-outline-reg page-scroll" href="#">Subscribe for product updates</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+        
+    </div>
+</div> <!-- end of card -->
+<!-- end of card --> 
+                    
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
-    <!-- end of roadmap -->
+    <!-- end of pricing -->
 
     <!-- Testimonials -->
     <div class="slider-2">
@@ -615,7 +559,6 @@
         </div> <!-- end of container -->
     </div> <!-- end of footer -->
     <!-- end of footer -->
-
 
 
 

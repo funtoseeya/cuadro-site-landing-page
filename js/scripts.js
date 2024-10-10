@@ -4,6 +4,36 @@
    Description: Custom JS file
 */
 
+function handleNavEarlyAccessRequest() {
+// Show email form on button click
+    document.getElementById("earlyAccessButton").addEventListener("click", function() {
+        document.getElementById("earlyAccessFormNav").style.display = "flex";
+        document.getElementById("earlyAccessButton").style.display = "none";
+    });
+
+    // Handle form submission
+    document.getElementById("earlyAccessFormNav").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Display thank-you message and redirect button
+        document.getElementById("earlyAccessFormNav").style.display = "none";
+        document.getElementById("thankYouMessageNav").style.display = "block";
+    });
+}
+
+function handlePricingEarlyAccessRequest() {
+    document.getElementById("earlyAccessForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Display thank-you message and redirect button
+        document.getElementById("earlyAccessForm").style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+    });
+}
+
+handleNavEarlyAccessRequest();
+handlePricingEarlyAccessRequest();
+
 
 (function($) {
     "use strict"; 
