@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9HEQ7WLHDX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9HEQ7WLHDX');
+</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -140,7 +149,7 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <p class="mb-0 small-text">Dozens of hassle-free builders</p>
+        <p class="mb-0 small-text">Join these hassle-free builders</p>
     </div>
 </div>
 <!-- End Additional Content -->
@@ -320,22 +329,22 @@
     </div>
     <div class="card-body">
         <div class="card-title">$0</div>
-        <p>We're offering early access before our official launch.
+        <p>We're offering free access to our Beta.
             Just enter your email below to get started.</p>
              <!-- Early Access Form -->
 
-        <form id="earlyAccessForm" method="POST" action="./php/sendEmail.php">
-            <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+             <form id="earlyAccessForm" method="POST" action="./php/mailchimp_subscribe.php">
+                <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-solid-reg">Start building</button>
+            </form>
+            
+            <!-- Thank You Message & Redirect Button (optional, for success feedback) -->
+            <div id="thankYouMessage" style="display: none;">
+                <p>Thank you! You've been added to the early access list.</p>
+                <a class="btn btn-solid-reg" href="https://funtoseeya.github.io/cuadro">Go to Site</a>
             </div>
-            <button type="submit" class="btn btn-solid-reg">Start building</button>
-        </form>
-
-        <!-- Thank You Message & Redirect Button (hidden initially) -->
-        <div id="thankYouMessage" style="display: none;">
-            <p>Thank you! You've been added to the early access list.</p>
-            <a class="btn btn-solid-reg" href="https://funtoseeya.github.io/cuadro">Go to Site</a>
-        </div>
 
         <ul class="list-unstyled li-space-lg">
             <li class="media">

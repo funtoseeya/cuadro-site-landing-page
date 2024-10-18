@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "matias.fontecilla@hotmail.com";
     $subject = "New User";
     $message = "New early access user email: " . $email;
-    $headers = "From: noreply@yourdomain.com";
+    $headers = "From: noreply@cuadro.io";
 
     if (mail($to, $subject, $message, $headers)) {
         http_response_code(200); // Success response
