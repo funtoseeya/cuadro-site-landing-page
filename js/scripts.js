@@ -85,7 +85,7 @@ handlePricingEarlyAccessRequest();
     /* Image Slider - Swiper */
     var imageSlider = new Swiper('.image-slider', {
         autoplay: {
-            delay: 2000,
+            delay: 10000,
             disableOnInteraction: false
 		},
         loop: true,
@@ -120,7 +120,7 @@ handlePricingEarlyAccessRequest();
     /* Card Slider - Swiper */
 	var cardSlider = new Swiper('.card-slider', {
 		autoplay: {
-            delay: 4000,
+            delay: 20000,
             disableOnInteraction: false
 		},
         loop: true,
