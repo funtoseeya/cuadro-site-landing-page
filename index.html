@@ -333,18 +333,81 @@
             Just enter your email below to get started.</p>
              <!-- Early Access Form -->
 
-             <form id="earlyAccessForm" method="POST" action="./php/mailchimp_subscribe.php">
-                <div class="form-group">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
-                </div>
-                <button type="submit" class="btn btn-solid-reg">Start building</button>
-            </form>
-            
-            <!-- Thank You Message & Redirect Button (optional, for success feedback) -->
-            <div id="thankYouMessage" style="display: none;">
-                <p>Thank you! You've been added to the early access list.</p>
-                <a class="btn btn-solid-reg" href="https://app.cuadro.io">Go to Site</a>
-            </div>
+
+            <!-- Mailchimp Subscription Form -->
+<div id="mc_embed_shell">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #earlyAccessForm {
+            background: #fff;
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+        }
+        .form-control {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding for the input */
+            border: 1px solid #ccc; /* Border style */
+            border-radius: 4px; /* Rounded corners */
+            box-shadow: none; /* Remove default shadow */
+        }
+        .form-control:focus {
+            border-color: #007bff; /* Focus color */
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Custom shadow on focus */
+        }
+    </style>
+    <form id="earlyAccessForm" method="POST" action="https://github.us22.list-manage.com/subscribe/post?u=c63a46fb8e27f6d05a1f683c8&amp;id=acffebec23" target="_blank">
+        <div class="form-group">
+            <input type="email" name="EMAIL" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-solid-reg">Start building</button>
+    </form>
+
+    <!-- Thank You Message & Redirect Button (optional, for success feedback) -->
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you! You've been added to the early access list.</p>
+        <a class="btn btn-solid-reg" href="https://app.cuadro.io">Go to Site</a>
+    </div>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        // jQuery for handling the form submission and showing the thank you message
+        (function($) {
+            $('#earlyAccessForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const email = $('#email').val(); // Get the email input value
+
+                // Optional: Validate email format
+                if (!email) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                // Create FormData object
+                const formData = new FormData();
+                formData.append('EMAIL', email);
+
+                // Send the form data to Mailchimp using fetch API
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors' // Use no-cors mode to prevent CORS issues
+                })
+                .then(response => {
+                    // Show thank you message if the response is successful
+                    document.getElementById('thankYouMessage').style.display = 'block';
+                    // Optionally, reset the form
+                    $('#earlyAccessForm')[0].reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was a problem with your submission. Please try again.');
+                });
+            });
+        }(jQuery));
+    </script>
+</div>
 
         <ul class="list-unstyled li-space-lg">
             <li class="media">
