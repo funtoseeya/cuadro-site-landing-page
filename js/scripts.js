@@ -1,3 +1,95 @@
+/* Template: Evolo - StartUp HTML Landing Page Template
+   Author: Inovatik
+   Created: June 2019
+   Description: Custom JS file
+*/
+
+// Handle the early access request for the navigation and pricing form
+$(document).ready(function() {
+    // Show the email form when the button is clicked
+    $('#earlyAccessButtonNav').on('click', function() {
+        $('#earlyAccessFormNav').css('display', 'flex');
+        $('#earlyAccessButtonNav').hide();
+    });
+
+    // Handle the form submission for early access and show thank you message
+    $('#earlyAccessFormNav').on('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const email = $('#emailNav').val(); // Get the email input value
+
+        // Optional: Validate email format
+        if (!email) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Hide the form and show the thank-you message
+        $('#earlyAccessFormNav').hide();
+        $('#thankYouMessageNav').show();
+
+        // Create FormData object
+        const formData = new FormData();
+        formData.append('EMAIL', email);
+
+        // Send the form data to Mailchimp using fetch API
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // Use no-cors mode to prevent CORS issues
+        })
+        .then(response => {
+            // Optionally, reset the form
+            $('#earlyAccessFormNav')[0].reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was a problem with your submission. Please try again.');
+        });
+    });
+});
+
+
+
+//handle the early access request on the pricing sheet
+// Handle the form submission for early access and show thank you message
+$(document).ready(function() {
+    $('#earlyAccessForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const email = $('#email').val(); // Get the email input value
+
+        // Optional: Validate email format
+        if (!email) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Hide the form and show the thank-you message
+        $('#earlyAccessForm').hide();
+        $('#thankYouMessage').show();
+
+        // Create FormData object
+        const formData = new FormData();
+        formData.append('EMAIL', email);
+
+        // Send the form data to Mailchimp using fetch API
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // Use no-cors mode to prevent CORS issues
+        })
+        .then(response => {
+            // Optionally, reset the form
+            $('#earlyAccessForm')[0].reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was a problem with your submission. Please try again.');
+        });
+    });
+});
+
 
 
 (function($) {

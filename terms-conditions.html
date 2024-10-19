@@ -98,17 +98,29 @@
                 </li>
             </ul>
     
-            <!-- Early Access Button and Form -->
             <div id="earlyAccessNav" class="d-flex align-items-center">
-                <button class="btn-solid-reg" id="earlyAccessButton" style="padding: 1.1875rem 1.125rem;">Start building</button>
-                <form id="earlyAccessFormNav" method="POST" action="sendEmail.php" style="display: none; margin-left: 1rem;">
-                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-solid-reg">Submit</button>
-                </form>
-                <!-- Thank You Message (hidden initially) -->
-                <div id="thankYouMessageNav" style="display: none; margin-left: 1rem;">
-                    <p>Thank you! You've been added to the early access list.</p>
-                    <a class="btn btn-solid-reg" href="https://app.cuadro.io">Go to Site</a>
+                <button class="btn-solid-reg" id="earlyAccessButtonNav" style="padding: 1.1875rem 1.125rem;">Start
+                    building</button>
+
+                <!-- Mailchimp Subscription Form -->
+                <div id="mc_embed_shell">
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet"
+                        type="text/css">
+
+
+                    <form id="earlyAccessFormNav" method="POST"
+                        action="https://github.us22.list-manage.com/subscribe/post?u=c63a46fb8e27f6d05a1f683c8&amp;id=acffebec23"
+                        style="display:none;margin-left:1rem">
+                        <input type="email" name="EMAIL" id="emailNav" class="form-control"
+                            placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-solid-reg">Submit</button>
+                    </form>
+
+                    <!-- Thank You Message (hidden initially) -->
+                    <div id="thankYouMessageNav" style="display: none; margin-left: 1rem;">
+                        <p>Thank you! You've been added to the early access list.</p>
+                        <a class="btn btn-solid-reg" href="https://app.cuadro.io">Go to Site</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,6 +221,7 @@
 
 	
     <!-- Scripts -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
